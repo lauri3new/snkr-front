@@ -1,0 +1,122 @@
+.heart {
+position: absolute;
+margin-left: 22%;
+top:50%;
+text-align: center;
+font-size: 70px;
+color:red;
+animation: heartbeat 1000ms forwards;
+}
+
+.heartEmpty {
+  display: none;
+}
+
+@keyframes heartbeat
+{
+  0% {
+    opacity: 0;
+    transform: scale(2.5 );
+  }
+  70% {
+    opacity: 1;
+    transform: scale( 3 );
+  }
+  100% {
+    opacity: 1;
+    transform: scale( 3 );
+  }
+}
+
+.shading {
+  background-color: rgba(0, 0, 0, 0.4);
+  height:100%;
+  width:100%;
+  transition: background-color 1000ms;
+  cursor: pointer;
+}
+
+.shading:hover {
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 1000ms;
+}
+
+
+.boximage {
+  margin-top: 20px;
+  height:30vw;
+  min-height: 200px;
+  min-width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.buy {
+  position: absolute;
+  font-family: "Arial";
+  top: 20px;
+  margin-left:25%;
+  height:50px;
+  transform: translateX(-50%);
+  vertical-align: middle;
+  line-height: 0;
+  font-size: 20px;
+  background-color: rgb(55,55,55);
+  color:white;
+  padding: 25px;
+  transition: background-color 300ms;
+  border: none;
+  text-align: center;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari*/
+     -khtml-user-select: none; /* Konqueror */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+.buy:hover {
+  transition: background-color 300ms;
+  background-color: rgb(155,155,155);
+}
+
+.buy:focus {
+  outline: 0;
+}
+
+.noPointer {
+  pointer-events: none;
+  cursor: pointer!important;
+}
+
+@media only screen and (max-width: 500px) {
+    .shading {
+        background-color: rgba(0,0,0,0);
+    }
+    .buy {
+      position:relative;
+      display: inline-block;
+      font-size: 15px;
+      padding:10px;
+      border-radius: 10px;
+      transform: translateY(30vh) translateX(-15vw);;
+    }
+    .heartEmpty {
+      display: inline-block;
+      font-size: 31px;
+      position: relative;
+      margin-left: 50%;
+
+            top:40%;
+          color: rgba(0,0,0,0);
+    }
+    .heart {
+            display: inline-block;
+      position: relative;
+      margin-left: 50%;
+            transform: translateX(-50%);
+      top:40%;
+      font-size: 40px;
+    }
+}

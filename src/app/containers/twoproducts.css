@@ -1,0 +1,149 @@
+.twoProducts {
+  position: absolute;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+.box {
+  background-repeat: no-repeat;
+  background-size:70%;
+  background-position: center;
+  width: 50%;
+  height: 100%;
+  opacity: 0;
+}
+
+.boxIn {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 100%;
+  animation: fade-in 1500ms forwards;
+}
+
+.share {
+  background-color: rgba(0, 0, 0, 0);
+  cursor: default;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: inline;
+  left:50%;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 11;
+  -webkit-transition: background-color 1000ms;
+-moz-transition: background-color 1000ms;
+-o-transition: background-color 1000ms;
+transition: background-color 1000ms;
+-webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari*/
+   -khtml-user-select: none; /* Konqueror */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none;
+}
+
+.share:hover {
+  background-color: rgba(155,155,155,0.9);
+}
+
+.scroll {
+  left:50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0);
+  color:rgb(55,55,55);
+  font-size: 30px;
+  border-radius: 40px;
+  padding-top: 7px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+  padding-left: 12px;
+  position:absolute;
+  margin-top: 80vh;
+  z-index: 10;
+  cursor: pointer;
+  -webkit-transition: background-color 1000ms;
+-moz-transition: background-color 1000ms;
+-o-transition: background-color 1000ms;
+transition: background-color 1000ms;
+}
+
+.scroll:hover {
+  background-color: rgba(155,155,155,0.9);
+  color:white;
+}
+
+.versus {
+  left:50%;
+  cursor: default;
+  background-color: rgb(55,55,55);
+  color:white;
+  font-size: 60px;
+  border-radius: 80px;
+  position:absolute;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  top:50%;
+  transform: translateY(-50%) translateX(-50%);
+  font-family: "ARIAL";
+  z-index: 10;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari*/
+     -khtml-user-select: none; /* Konqueror */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+.opacityZero {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes fade-in {
+  0% {
+  opacity: 0;
+  }
+  67% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+}
+
+@media only screen and (max-device-width: 500px) {
+    .twoProducts {
+      flex-direction: column;
+    }
+    .boxIn {
+        height:50%;
+        width:100%;
+    }
+    .box {
+        height:50%;
+        width:100%;
+    }
+    .versus {
+
+      font-size: 30px;
+      border-radius: 60px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 10px;
+      padding-bottom: 7.5px;
+    }
+    .scroll {
+      display: none;
+    }
+}

@@ -1,0 +1,73 @@
+.tooltip {
+  position: absolute;
+  z-index: 10;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10vh;
+  /*background-color: rgb(55,55,55);*/
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  cursor: default;
+}
+
+.opacityZero {
+  animation: fade-out 2000ms forwards;
+}
+
+.enterActive {
+  animation: fade-in-extended 1500ms forwards;
+}
+
+.enterInit {
+  animation: fade-in 500ms forwards;
+}
+
+@keyframes fade-in {
+  0% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+}
+
+@keyframes fade-in-extended {
+  0% {
+  opacity: 0;
+  }
+  67% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+}
+
+.leave {
+opacity: 1;
+}
+
+.leave.leaveActive {
+  animation: fade-out 1000ms forwards;
+}
+
+@keyframes fade-out {
+  0% {
+      opacity: 1;
+  }
+  75% {
+      opacity: 1;
+  }
+  100% {
+  opacity: 0;
+  }
+}
+
+@media only screen and (max-device-width: 500px) {
+  .tooltip {
+    display:none;
+  }
+}
